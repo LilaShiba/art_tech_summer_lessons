@@ -78,15 +78,18 @@ We are going to create a basic program to turn the onboard LEDs off and on. We w
   For example, we will use #include to tell the program to include the circuit playground (cpx) library- all our shortcuts!
 
 ## Making a new Sketch
-
 - Simply start the IDE up and go to file >> new.
-- Next, we will configure our settings for the cpx by selecting the board
+
+####Next, we will configure our settings for the cpx by selecting the board
 
 ![cpx](https://kyle1james.gitbooks.io/sub-day/content/assets/Screen%20Shot%202017-05-09%20at%207.39.34%20PM.png)
-- The port
+
+####The port
+
 ![port](https://kyle1james.gitbooks.io/sub-day/content/assets/Screen%20Shot%202017-05-09%20at%207.40.29%20PM.png)
 
-- And adding the library
+#### adding the library
+
 ![lib3](lib3.png)
 
 
