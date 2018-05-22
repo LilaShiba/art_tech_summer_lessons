@@ -66,6 +66,6 @@ This includes tech planning as well. Both Art + Tech need to merge.
 
 This was the first of several prototypes. You can check out the program prototype [here](http://kyle1james.com/)
 
-![pic2](pic2.jpg)
+![pic2](pic2.JPG)
 
-![pic4](pic4.jpg)
+![pic4](pic4.JPG)
