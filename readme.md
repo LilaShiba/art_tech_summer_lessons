@@ -52,4 +52,20 @@ There are ways around both digital and analog to do what you want! Digital tends
 
 ## Example of LED Art + Tech
 
+### Planning Stage
+
+A ton of work goes into planning. It is the most important stage as it serves as the how-to when building!
 ![pic0](pic0.jpg)
+
+This includes tech planning as well. Both Art + Tech need to merge.
+
+![pic1](pic1.png)
+
+
+### Building
+
+This was the first of several prototypes. You can check out the program prototype [here](http://kyle1james.com/)
+
+![pic2](pic2.jpg)
+
+![pic4](pic4.jpg)
