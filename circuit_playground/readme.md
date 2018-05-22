@@ -53,3 +53,46 @@ First go to tools > board > manager
 
 Then type in SAMD and download
 ![board2](board2.png)
+
+
+## RESET
+
+![on](https://content.eveonline.com/www/newssystem/media/67449/1/have-you-tried.jpg)
+Now you need to turn it on and off again! Meaning, just restart the Arduino IDE. You are almost ready to gooooo.
+
+# Time to Code!
+IMPORTANT
+- Arduino reads asynchronously: from the top down.
+- Compile before you upload code
+- Always type code! Never copy and paste
+- Questions are your friend
+
+## Functions
+
+We are going to create a basic program to turn the onboard LEDs off and on. We will do this by writing two functions, but first, what is a function?
+
+- Basically, a list of commands
+
+  A function's code is anything between the brackets { } If code is outside the brackets { } it is not a part of the function, and will most likely cause errors.
+  Generally we define requirements and variables outside the brackets { }.
+  For example, we will use #include to tell the program to include the circuit playground (cpx) library- all our shortcuts!
+
+## Making a new Sketch
+
+- Simply start the IDE up and go to file >> new.
+- Next, we will configure our settings for the cpx by selecting the board
+
+![cpx](https://kyle1james.gitbooks.io/sub-day/content/assets/Screen%20Shot%202017-05-09%20at%207.39.34%20PM.png)
+- The port
+![port](https://kyle1james.gitbooks.io/sub-day/content/assets/Screen%20Shot%202017-05-09%20at%207.40.29%20PM.png)
+
+- And adding the library
+![lib3](lib3.png)
+
+
+
+
+
+
+
+![pinout](https://cdn-learn.adafruit.com/assets/assets/000/047/156/original/circuit_playground_Adafruit_Circuit_Playground_Express_Pinout.png?1507829017)
