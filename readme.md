@@ -71,7 +71,7 @@ Then, we used the info from the sun to control LEDs in silicon skin with hand bl
 
 ### Building
 
-This was the first of several prototypes. You can check out the program prototype [here](http://kyle1james.com/)
+This was the first of several prototypes. You can check out the program prototype [here](https://art-tech-example.herokuapp.com/)
 
 ![pic2](pic2.JPG)
 
