@@ -61,6 +61,13 @@ This includes tech planning as well. Both Art + Tech need to merge.
 
 ![pic1](pic1.png)
 
+### We got data from the Sun
+
+So, we built a little app that collects live solar data
+![app1](ss0.png)
+
+Then, we used the info from the sun to control LEDs in silicon skin with hand blown glass shards
+![app2](ss1.png)
 
 ### Building
 
@@ -73,4 +80,4 @@ This was the first of several prototypes. You can check out the program prototyp
 ### Testing
 You have to test and refine. Failing is just a step towards the end goal!
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-cnLp1fHb-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+https://www.youtube.com/embed/-cnLp1fHb-Y
