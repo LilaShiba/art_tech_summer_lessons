@@ -69,3 +69,8 @@ This was the first of several prototypes. You can check out the program prototyp
 ![pic2](pic2.JPG)
 
 ![pic4](pic4.JPG)
+
+### Testing
+You have to test and refine. Failing is just a step towards the end goal!
+
+![video1](https://youtu.be/-cnLp1fHb-Y)
