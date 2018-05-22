@@ -130,6 +130,41 @@ void loop() {
 Simply click the arrow!
 
 ## Program Two
+#### Here is the full code, next we will break it down
+
+```
+#include <Adafruit_CircuitPlayground.h>
+int light;
+#define COLOR 0x001FF
+
+
+void setup() {
+  // put your setup code here, to run once:
+  CircuitPlayground.begin();
+  Serial.begin(9600); //baud rate
+
+}
+
+void loop() {
+  light = CircuitPlayground.lightSensor();
+
+  if(light < 50){
+
+    for (int pixel = 0; pixel < 10; pixel++){
+       CircuitPlayground.setPixelColor(pixel,COLOR);
+       delay(500);
+    }
+  }
+
+  else if(light > 50 && light < 101){
+    CircuitPlayground.setPixelColor(0, 0,0,255);
+  }
+
+  else{
+    CircuitPlayground.setPixelColor(0, 0, 255, 0);
+    }
+}
+```
 
 #### Imports, Variables, and Constants
 - First, we included our library
