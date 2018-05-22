@@ -73,4 +73,4 @@ This was the first of several prototypes. You can check out the program prototyp
 ### Testing
 You have to test and refine. Failing is just a step towards the end goal!
 
-[![video1](pic2)](https://www.youtube.com/watch?v=-cnLp1fHb-Y&feature=youtu.be)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-cnLp1fHb-Y" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
