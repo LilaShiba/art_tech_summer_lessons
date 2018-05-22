@@ -79,18 +79,117 @@ We are going to create a basic program to turn the onboard LEDs off and on. We w
 
 ## Making a new Sketch
 - Simply start the IDE up and go to file >> new.
+- Plug the circuit playground into the computer
 
-####Next, we will configure our settings for the cpx by selecting the board
+#### Next, we will configure our settings for the cpx by selecting the board
 
 ![cpx](https://kyle1james.gitbooks.io/sub-day/content/assets/Screen%20Shot%202017-05-09%20at%207.39.34%20PM.png)
 
-####The port
+#### The port
 
 ![port](https://kyle1james.gitbooks.io/sub-day/content/assets/Screen%20Shot%202017-05-09%20at%207.40.29%20PM.png)
 
 #### adding the library
 
 ![lib3](lib3.png)
+
+#### setup
+![set](setup.png)
+
+#### loop
+```
+#include <Adafruit_CircuitPlayground.h>
+
+void setup() {
+  CircuitPlayground.begin();
+}
+
+void loop() {
+  CircuitPlayground.clearPixels();
+  delay(1000);
+  CircuitPlayground.setPixelColor(0, 255,   0,   0);
+  CircuitPlayground.setPixelColor(1, 128, 128,   0);
+  CircuitPlayground.setPixelColor(2,   0, 255,   0);
+  CircuitPlayground.setPixelColor(3,   0, 128, 128);
+  CircuitPlayground.setPixelColor(4,   0,   0, 255);
+  CircuitPlayground.setPixelColor(5, 255,   0,   0);
+  CircuitPlayground.setPixelColor(6, 128, 128,   0);
+  CircuitPlayground.setPixelColor(7,   0, 255,   0);
+  CircuitPlayground.setPixelColor(8,   0, 128, 128);
+  CircuitPlayground.setPixelColor(9,   0,   0, 255);
+  delay(1000);
+}
+```
+
+- CircuitPlayground defines where we are doing what
+- setPixelColor tells us what led # and then gives a rgb scale.
+- 255 is full bright & 0 is off
+- delay is the amount of time in milli seconds to wait
+
+## Compile and Upload
+Simply click the arrow!
+
+## Program Two
+
+#### Imports, Variables, and Constants
+- First, we included our library
+- next we make a variable called light: a variable is a box that holds something for us. It is named so because it can and often does change
+- lastly we define COLOR as a hex value. This is a constant, meaning it won't ever change.
+```
+#include <Adafruit_CircuitPlayground.h>
+int light;
+#define COLOR 0x001FF
+```
+
+#### Setup
+We simply say what board we are using and agree how fast the computer and circuit playground will speak (aka baud rate)
+```
+void setup() {
+  // put your setup code here, to run once:
+  CircuitPlayground.begin();
+  Serial.begin(9600); //baud rate
+
+}
+```
+#### Function Loop
+- first, we call in data from the light sensor
+```
+void loop() {
+  light = CircuitPlayground.lightSensor();
+```
+#### Conditional
+- next, we say if the light is less than 50 lux (The range is approximately 0 Lux to 1500 Lux maximum.) then do this loop
+
+```
+  if(light < 50){
+
+```
+#### loop
+ We are saying for every pixel set the color to our constant color.
+ - pixel count starts at 0
+ - pixel < 10; stop after the 10th pixel
+ - pixel++ go over every pixel one at a time
+```
+    for (int pixel = 0; pixel < 10; pixel++){
+       CircuitPlayground.setPixelColor(pixel,COLOR);
+       delay(500);
+    }
+  }
+```
+
+#### Conditional ELSE IF
+If it isn't 50 lux or darker, do this:
+
+```
+  else if(light > 50 && light < 101){
+    CircuitPlayground.setPixelColor(0, 0,0,255);
+  }
+
+  else{
+    CircuitPlayground.setPixelColor(0, 0, 255, 0);
+    }
+}
+```
 
 
 
