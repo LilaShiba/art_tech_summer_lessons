@@ -187,7 +187,7 @@ void setup() {
 }
 ```
 #### Function Loop
-- first, we call in data from the light sensor
+- first, we call in data from the light sensor and save it as a variable- since that data will be changing
 ```
 void loop() {
   light = CircuitPlayground.lightSensor();
@@ -202,7 +202,7 @@ void loop() {
 #### loop
  We are saying for every pixel set the color to our constant color.
  - pixel count starts at 0
- - pixel < 10; stop after the 10th pixel
+ - pixel < 10; stop after the 10th pixel (which is the 9th index). We count from 0
  - pixel++ go over every pixel one at a time
 ```
     for (int pixel = 0; pixel < 10; pixel++){
