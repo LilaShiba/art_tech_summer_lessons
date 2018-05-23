@@ -132,30 +132,31 @@ Simply click the arrow!
 ## Program Two
 #### Here is the full code, next we will break it down
 
-```
-#include <Adafruit_CircuitPlayground.h>
-int light;
-#define COLOR 0x001FF
+```c++
+#include <Adafruit_CircuitPlayground.h>   // imports library
+int light;                                // variable
+#define COLOR 0x001FF                     // constant
 
 
 void setup() {
   // put your setup code here, to run once:
-  CircuitPlayground.begin();
-  Serial.begin(9600); //baud rate
+  CircuitPlayground.begin();          // inits board
+  Serial.begin(9600);                 // sets agreed talk rate
 
 }
 
 void loop() {
-  light = CircuitPlayground.lightSensor();
-
-  if(light < 50){
+  light = CircuitPlayground.lightSensor();   // collect data from light sensor
+                                            // save data in variable light
+  if(light < 50){                          // if lux value is less than 50
+                                          // do this loop
 
     for (int pixel = 0; pixel < 10; pixel++){
        CircuitPlayground.setPixelColor(pixel,COLOR);
        delay(500);
     }
   }
-
+      // if lux is greater than 50 but less that 101
   else if(light > 50 && light < 101){
     CircuitPlayground.setPixelColor(0, 0,0,255);
   }
