@@ -1,5 +1,16 @@
 # Art & Tech
-The unconventional mixing and matching of subject areas
+
+
+## p5 links
+
+- [Shapes](https://www.youtube.com/watch?v=D1ELEeIs0j8&t=199s)
+- [color](https://www.youtube.com/watch?v=9mucjcrhFcM)
+- [User input](https://www.youtube.com/watch?v=RnS0YNuLfQQ)
+- [Objects](https://www.youtube.com/watch?v=-e5h4IGKZRY)
+
+
+
+#### The unconventional mixing and matching of subject areas
 
 [itp](https://tisch.nyu.edu/itp)
 [media lab](https://www.media.mit.edu/)
