@@ -245,7 +245,29 @@ If it isn't 50 lux or darker, do this:
 }
 ```
 
+## Loops
 
+```c
+#include <Adafruit_CircuitPlayground.h>
+
+void setup() {
+  CircuitPlayground.begin();
+}
+
+void loop() {
+  //CircuitPlayground.clearPixels();
+  // backwards loop
+  for (int pixel = 10; pixel > -1; pixel--){
+    CircuitPlayground.setPixelColor(pixel,0,0,255);
+    delay(500);
+  }
+  // forward loop
+  for( int pixel = 0; pixel < 10; pixel++){
+    CircuitPlayground.setPixelColor(pixel,0,255,0);
+    delay(500);
+  }
+}
+```
 
 
 ## Pinout
