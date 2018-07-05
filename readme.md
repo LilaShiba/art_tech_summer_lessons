@@ -53,24 +53,56 @@ void loop() {
 
 ```
 
-# Complie & Upload your Code
+# Light Sensor & Speaker with Circuit Playground 
+- [understanding mapping](https://www.arduino.cc/reference/en/language/functions/math/map/)
+
+```c
+
+#include <Adafruit_CircuitPlayground.h>
+
+int maxValue = 100;
+
+void setup() {
+  CircuitPlayground.begin();
+}
+
+void loop() {
+  // use the light sensor and save data into a variable
+  int sensorReading = CircuitPlayground.lightSensor();
+  
+  // map light data into something that makes sense for sound
+  int frequency = map(sensorReading, 0, maxValue, 500, 800);
+
+  Serial.println(sensorReading);
+
+  //CircuitPlayground.playTone(frequency, duration_ms)
+  CircuitPlayground.playTone(frequency, 50);
+}
+
+```
+
+
+
+# Other How To's for Circuit Playground
+
+### Complie & Upload your Code
 
 ![code](https://kyle1james.gitbooks.io/sub-day/content/assets/Screen%20Shot%202017-05-09%20at%207.39.34%20PM.png)
 
 
-# Then
+### Then
 
 ![code2](https://kyle1james.gitbooks.io/sub-day/content/assets/Screen%20Shot%202017-05-09%20at%207.40.29%20PM.png)
 
-# Now we verify the code, which will output any errors in the terminal. The check mark
+### Now we verify the code, which will output any errors in the terminal. The check mark
 Then upload. The arrow
 
 ![code3](https://kyle1james.gitbooks.io/sub-day/content/assets/Screen%20Shot%202017-05-09%20at%207.42.36%20PM.png)
 
-# Even More Examples
+### Even More Examples
 [examples](https://github.com/kyle1james/examples)
 
-# reverse loop
+### reverse loop
 ```c
   for (int pixel = 10; pixel > -1; pixel-=2){
     CircuitPlayground.setPixelColor(pixel,0,0,255);
@@ -85,6 +117,10 @@ Then upload. The arrow
 [itp](https://tisch.nyu.edu/itp)
 [media lab](https://www.media.mit.edu/)
 [eyebeam](https://www.eyebeam.org/)
+
+
+
+# All About Data
 
 ## Analog & Digital
 [resource](https://learn.sparkfun.com/tutorials/analog-vs-digital)
