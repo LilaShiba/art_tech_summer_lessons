@@ -8,9 +8,15 @@
 - [User input](https://www.youtube.com/watch?v=RnS0YNuLfQQ)
 - [Objects](https://www.youtube.com/watch?v=-e5h4IGKZRY)
 
+# Code Along with P5
+- [repo](https://github.com/kyle1james/solar_form/tree/master/bolier_plate)
+- [ide](https://atom.io/)
 
-# Light the Way
 
+
+
+# Circuit Playground 
+## Light the Way
 ### The goal is to make a light show!
 
 
