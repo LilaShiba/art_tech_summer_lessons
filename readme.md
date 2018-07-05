@@ -9,7 +9,7 @@
 - [Objects](https://www.youtube.com/watch?v=-e5h4IGKZRY)
 
 # Code Along with P5
-- [repo](https://github.com/kyle1james/solar_form/tree/master/bolier_plate)
+- [repo](https://github.com/kyle1james/cap2018)
 - [ide](https://atom.io/)
 
 
