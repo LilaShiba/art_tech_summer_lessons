@@ -56,6 +56,21 @@ void loop() {
 # Light Sensor & Speaker with Circuit Playground 
 - [understanding mapping](https://www.arduino.cc/reference/en/language/functions/math/map/)
 
+#### Light Sensor
+The light sensor is on pin A5 and it will read between 0 and 1023 with higher values corresponding to brighter light levels. The range is approximately 0 Lux to 1500 Lux maximum. 300 is common for most indoor light levels.
+
+You can request the raw analog reading (0 = no light, up to 1023 = ~1500 Lux) with CircuitPlayground.lightSensor()
+
+#### Speaker
+You can make your circuit playground sing with the built in buzzer. This is a miniature magnetic speaker connected to digital pin #5
+
+You can play basic square wave beeps/tones with CircuitPlayground.playTone(frequency, duration_ms). Where frequency is the frequency in Hertz and duration is the time to play the beep for, in millisecods.
+
+That means CircuitPlayground.playTone(440, 500) will play 440 Hz (middle A) for 500 milliseconds (half of a second). 
+
+
+#### light theremin
+
 ```c
 
 #include <Adafruit_CircuitPlayground.h>
@@ -80,6 +95,13 @@ void loop() {
 }
 
 ```
+
+# Sound Sensor
+
+The microphone is sensitive to 100 Hz - 10,000 Hz audio frequencies. You can read the analog voltage corresponding to the audio on analog pin #A4. When it's silent there will be a reading of ~330 and when loud the audio will read between 0 and 800 or so. Averaging and smoothing must be done to convert this to sound-pressure-level.
+
+
+CircuitPlayground.soundSensor() this will give you just a value from between -1023 and 1023 where the default 'quiet' reading is 0. However, we don't really recommend using this, because its slow and gives you only a single point.
 
 
 
