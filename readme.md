@@ -1,16 +1,78 @@
-# Art & Tech
+# Circuit Playground Cheat Sheet
+
+Task         | Code 
+------------ | -------------
+Change Neopixels   | ``` CircuitPlayground.setPixelColor(pixel,red,green,blue);```
+Change Brightness  | ``` CircuitPlayground.changeBrightness(brightness);```
+Pause for a second | ``` delay(1000); ```
+Light sensor       | ``` int value = CircuitPlayground.lightSensor();```
+Sound Sensor       | ``` int value = CircuitPlayground.soundSensor();```
+Touch Pads         | ``` int cap0 = CircuitPlayground.readCap(0);```
+Accelerometer      | ``` X = CircuitPlayground.motionX();```
+Speaker            | ``` CircuitPlayground.playTone(500, 100); ```
 
 
-## p5 links
+# Control Flow
 
-- [Shapes](https://www.youtube.com/watch?v=D1ELEeIs0j8&t=199s)
-- [color](https://www.youtube.com/watch?v=9mucjcrhFcM)
-- [User input](https://www.youtube.com/watch?v=RnS0YNuLfQQ)
-- [Objects](https://www.youtube.com/watch?v=-e5h4IGKZRY)
+#### For Loop
+The for statement is useful for any repetitive operation. The for statement is used to repeat a block of statements enclosed in curly braces. An increment counter is usually used to increment and terminate the loop.
 
-# Code Along with P5
-- [repo](https://github.com/kyle1james/cap2018)
-- [ide](https://atom.io/)
+```c
+      // for every neopixel
+  for (int pixel = 0; pixel < 11; pixel+=2){
+      // make it this color
+    CircuitPlayground.setPixelColor(pixel,0,255,0);
+    delay(100);
+  }
+
+```
+
+#### reverse for loop
+```c
+  for (int pixel = 10; pixel > -1; pixel-=2){
+    CircuitPlayground.setPixelColor(pixel,0,0,255);
+    delay(50);
+  }
+
+```
+
+#### Conditionals 
+The if statement checks for a condition and executes the proceeding statement or set of statements if the condition is 'true'.
+
+```c
+if (condition1)
+{
+  // do Thing A
+}
+else if (condition2)
+{
+  // do Thing B
+}
+else
+{
+  // do Thing C
+}
+```
+Operator     | Meaning 
+------------ | -------------
+x == y | (x is equal to y)
+x != y | (x is not equal to y)
+x <  y | (x is less than y)
+x >  y | (x is greater than y)
+x <= y | (x is less than or equal to y)
+x >= y | (x is greater than or equal to y)
+
+#### For Example:
+
+```c
+  if (something > something_else) {
+    CircuitPlayground.setPixelColor(pixel,0,0,0);
+  } else {
+     CircuitPlayground.setPixelColor(pixel,255,255,255);
+  }
+```
+
+
 
 
 
@@ -41,17 +103,6 @@ void loop() {
 # Now you try!
 
 
-# Loops
-
-```c
-      // for every neopixel
-  for (int pixel = 0; pixel < 11; pixel+=2){
-      // make it this color
-    CircuitPlayground.setPixelColor(pixel,0,255,0);
-    delay(100);
-  }
-
-```
 
 # Light Sensor & Speaker with Circuit Playground 
 - [understanding mapping](https://www.arduino.cc/reference/en/language/functions/math/map/)
@@ -124,14 +175,6 @@ Then upload. The arrow
 ### Even More Examples
 [examples](https://github.com/kyle1james/examples)
 
-### reverse loop
-```c
-  for (int pixel = 10; pixel > -1; pixel-=2){
-    CircuitPlayground.setPixelColor(pixel,0,0,255);
-    delay(50);
-  }
-
-```
 
 
 #### The unconventional mixing and matching of subject areas
