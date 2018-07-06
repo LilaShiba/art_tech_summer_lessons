@@ -1,4 +1,9 @@
-# Circuit Playground Cheat Sheet
+# Art and Tech
+
+Changing how we view and interact with the world!
+
+
+## Circuit Playground Cheat Sheet
 
 Task         | Code 
 ------------ | -------------
@@ -12,7 +17,7 @@ Accelerometer      | ``` X = CircuitPlayground.motionX();```
 Speaker            | ``` CircuitPlayground.playTone(500, 100); ```
 
 
-# Control Flow
+## Control Flow
 
 #### For Loop
 The for statement is useful for any repetitive operation. The for statement is used to repeat a block of statements enclosed in curly braces. An increment counter is usually used to increment and terminate the loop.
@@ -77,8 +82,7 @@ x >= y | (x is greater than or equal to y)
 
 
 
-# Circuit Playground 
-## Light the Way
+## Hello World Program
 ### The goal is to make a light show!
 
 
@@ -100,11 +104,10 @@ void loop() {
 
 ```
 
-# Now you try!
 
 
-
-# Light Sensor & Speaker with Circuit Playground 
+## Program 2: Sensors
+### Light Sensor & Speaker with Circuit Playground 
 - [understanding mapping](https://www.arduino.cc/reference/en/language/functions/math/map/)
 
 #### Light Sensor
@@ -119,8 +122,6 @@ You can play basic square wave beeps/tones with CircuitPlayground.playTone(frequ
 
 That means CircuitPlayground.playTone(440, 500) will play 440 Hz (middle A) for 500 milliseconds (half of a second). 
 
-
-#### light theremin
 
 ```c
 
@@ -147,16 +148,7 @@ void loop() {
 
 ```
 
-# Sound Sensor
-
-The microphone is sensitive to 100 Hz - 10,000 Hz audio frequencies. You can read the analog voltage corresponding to the audio on analog pin #A4. When it's silent there will be a reading of ~330 and when loud the audio will read between 0 and 800 or so. Averaging and smoothing must be done to convert this to sound-pressure-level.
-
-
-CircuitPlayground.soundSensor() this will give you just a value from between -1023 and 1023 where the default 'quiet' reading is 0. However, we don't really recommend using this, because its slow and gives you only a single point.
-
-
-
-# Other How To's for Circuit Playground
+## Other How To's for Circuit Playground
 
 ### Complie & Upload your Code
 
@@ -185,16 +177,16 @@ Then upload. The arrow
 
 
 
-# All About Data
+## All About Data
 
-## Analog & Digital
+### Analog & Digital
 [resource](https://learn.sparkfun.com/tutorials/analog-vs-digital)
 
 What? It's like two different languages in the electronic world and the languages are called signals?
 
 Signals are passed between devices in order to send and receive information
 
-### analog
+#### analog
 
 Analog Signals are time-varying quantities: Basically, voltage changing over time to relay information.
 
@@ -212,7 +204,7 @@ void loop() {
   analogWrite(analogOutPin, outputValue);
 ```
 
-### digital
+#### digital
 There at 10 types of people in the world. Those who get binary and those who don'- [ ]
 
 Digital signals try to solve the problem of analog interference by having two signal states: on or off. It's binary.
@@ -228,7 +220,7 @@ void loop() {
 }
 ```
 
-## Long Story Short
+### Long Story Short
 There are ways around both digital and analog to do what you want! Digital tends to be easier but cost more, and analog is the opposite
 
 
