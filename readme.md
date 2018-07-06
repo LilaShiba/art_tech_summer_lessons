@@ -13,7 +13,7 @@ Pause for a second | ``` delay(1000); ```
 Light sensor       | ``` int value = CircuitPlayground.lightSensor();```
 Sound Sensor       | ``` int value = CircuitPlayground.soundSensor();```
 Touch Pads         | ``` int cap0 = CircuitPlayground.readCap(0);```
-Accelerometer      | ``` X = CircuitPlayground.motionX();```
+Accelerometer      | ``` int x = CircuitPlayground.motionX();```
 Speaker            | ``` CircuitPlayground.playTone(500, 100); ```
 Buttons            | ``` CircuitPlayground.leftButton();```
 Slide Switch       | ``` CircuitPlayground.slideSwitch();```
