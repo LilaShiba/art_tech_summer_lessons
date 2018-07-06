@@ -19,6 +19,10 @@ Buttons            | ``` CircuitPlayground.leftButton();```
 Slide Switch       | ``` CircuitPlayground.slideSwitch();```
 
 
+Note for touch pads:
+just set the pin to any of the pad #'s next to the pad (e.g. 0, 1, 2, 3, 6, 9, 10 and 12) The number returned will vary from about 0 to about 1000.
+
+
 ## Control Flow
 
 #### For Loop
