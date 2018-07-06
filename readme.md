@@ -15,6 +15,8 @@ Sound Sensor       | ``` int value = CircuitPlayground.soundSensor();```
 Touch Pads         | ``` int cap0 = CircuitPlayground.readCap(0);```
 Accelerometer      | ``` X = CircuitPlayground.motionX();```
 Speaker            | ``` CircuitPlayground.playTone(500, 100); ```
+Buttons            | ``` CircuitPlayground.leftButton();```
+Slide Switch       | ``` CircuitPlayground.slideSwitch();```
 
 
 ## Control Flow
