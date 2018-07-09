@@ -293,3 +293,46 @@ Nice! Now, search for Adafruit TeeOnArdu. Click on the board entry and then clic
 - Then, select Tools > USB Type > MIDI
 - To upload new sketches you just have to double-press the reset button on the Circuit Playground each time you hit the upload button 
 - If you decide to use your Circuit Playground as a regular Circuit Playground again, just select it under Tools > Board >Circuit Playground and upload an Arduino sketch like Blink File > Examples > Basics > Digital > Blink. The first time you have to double-press the reset button, but after that your Circuit Playground behaves like out of the box.
+
+
+#### Example Code
+
+```c
+#include <Adafruit_CircuitPlayground.h>
+
+void setup() {
+  CircuitPlayground.begin();
+}
+
+void loop() {
+  const int CAPMIN = 25; // it is 25 to cancel out nosie
+  int cap1 = CircuitPlayground.readCap(1);
+  
+  if (CircuitPlayground.leftButton()) {
+    CircuitPlayground.redLED(HIGH);
+                    //(note,velocity,channel)
+    usbMIDI.sendNoteOn(60, 127, 0);  // 60 = C4 velocity 127 (max)
+    delay(100);
+    usbMIDI.sendNoteOff(60, 0, 0);
+    CircuitPlayground.redLED(LOW);
+  }
+  if (CircuitPlayground.rightButton()) {
+    CircuitPlayground.redLED(HIGH);
+    usbMIDI.sendNoteOn(61, 127, 0);
+    delay(100);
+    usbMIDI.sendNoteOff(61, 0, 0);
+    CircuitPlayground.redLED(LOW); 
+  }
+  
+  if (cap1 > CAPMIN){
+     usbMIDI.sendNoteOn(42,127,0);
+     delay(100);
+     usbMIDI.sendNoteOff(61,0,0);
+  }
+
+  // dont listen to any incoming MIDI!
+  while (usbMIDI.read()) {
+  }
+}
+
+```
