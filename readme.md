@@ -305,7 +305,7 @@ void setup() {
 }
 
 void loop() {
-  const int CAPMIN = 25; // it is 25 to cancel out nosie
+  const int CAPMIN = 25; // it is 25 to cancel noise
   int cap1 = CircuitPlayground.readCap(1);
   
   if (CircuitPlayground.leftButton()) {
