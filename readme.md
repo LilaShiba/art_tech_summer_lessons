@@ -269,3 +269,27 @@ You have to test and refine. Failing is just a step towards the end goal!
 ![done](done.JPG)
 
 https://www.youtube.com/embed/-cnLp1fHb-Y
+
+
+
+
+# DJ Circuit Playground
+We will be following this: [link](https://learn.adafruit.com/circuit-playground-pizza-box-dj-controller/pz-1-pizza-box-dj-code)
+
+FIrst things first, we have to install additional libraries. This is so that the CP can learn some new commands. Like how to be a MIDI
+
+#### To Add Additional Boards
+Go to Arduino >> Preferences and add the link below to the 'Additional Boards Manager URL'
+
+https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
+
+![link](https://cdn-learn.adafruit.com/assets/assets/000/033/278/medium800/flora_urls.png?1466733189)
+
+Nice! Now, search for Adafruit TeeOnArdu. Click on the board entry and then click the Install button.
+
+#### How to Use It
+
+- In the Arduino IDE, select the new entry under Tools > Board > Circuit Playground (TeensyCore)
+- Then, select Tools > USB Type > MIDI
+- To upload new sketches you just have to double-press the reset button on the Circuit Playground each time you hit the upload button 
+- If you decide to use your Circuit Playground as a regular Circuit Playground again, just select it under Tools > Board >Circuit Playground and upload an Arduino sketch like Blink File > Examples > Basics > Digital > Blink. The first time you have to double-press the reset button, but after that your Circuit Playground behaves like out of the box.
