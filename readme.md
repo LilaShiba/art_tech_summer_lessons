@@ -294,7 +294,36 @@ Nice! Now, search for Adafruit TeeOnArdu. Click on the board entry and then clic
 - To upload new sketches you just have to double-press the reset button on the Circuit Playground each time you hit the upload button 
 - If you decide to use your Circuit Playground as a regular Circuit Playground again, just select it under Tools > Board >Circuit Playground and upload an Arduino sketch like Blink File > Examples > Basics > Digital > Blink. The first time you have to double-press the reset button, but after that your Circuit Playground behaves like out of the box.
 
+Look up notes: [midi note numbers](http://www.inspiredacoustics.com/en/MIDI_note_numbers_and_center_frequencies)
 
+#### Process
+- create threshold value. How hard do you have to touch the sensor for it to trigger?
+```c
+const int CAPMIN = 25; // it is 25 to cancel noise
+```
+
+- create your cap variables
+```c
+int cap1 = CircuitPlayground.readCap(1);
+```
+- use variable in conditional
+```c
+ if (cap1 > CAPMIN){
+      magic code here
+ }
+```
+- use MIDI methods to play notes: usb.MIDI.sendNoteOn(note,velocity,channel)
+```c
+ if (cap1 > CAPMIN){
+     usbMIDI.sendNoteOn(42,127,0);
+     delay(100);
+     usbMIDI.sendNoteOff(61,0,0);
+ }
+```
+- Customize code. Does a light pattern happen for a certain note?
+
+
+- set
 #### Example Code
 
 ```c
@@ -336,4 +365,3 @@ void loop() {
 }
 
 ```
-[midi note numbers](http://www.inspiredacoustics.com/en/MIDI_note_numbers_and_center_frequencies)
