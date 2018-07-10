@@ -274,6 +274,17 @@ https://www.youtube.com/embed/-cnLp1fHb-Y
 
 
 # DJ Circuit Playground
+
+Boards to download or update:
+- Ardunio AVR
+- Adafruit AVR
+- MIDIUSB
+- TeeOnArdu
+
+Board Link: 
+https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
+
+
 We will be following this: [link](https://learn.adafruit.com/circuit-playground-pizza-box-dj-controller/pz-1-pizza-box-dj-code)
 
 FIrst things first, we have to install additional libraries. This is so that the CP can learn some new commands. Like how to be a MIDI
