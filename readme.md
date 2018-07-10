@@ -1,6 +1,7 @@
 # Art and Tech
 
 Changing how we view and interact with the world!
+[link to cp midi](https://kyle1james.github.io/cp_midi_2018/)
 
 
 ## Circuit Playground Cheat Sheet
