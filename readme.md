@@ -322,8 +322,6 @@ int cap1 = CircuitPlayground.readCap(1);
 ```
 - Customize code. Does a light pattern happen for a certain note?
 
-
-- set
 #### Example Code
 
 ```c
