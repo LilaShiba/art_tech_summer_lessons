@@ -1,6 +1,8 @@
 # Art and Tech
 
 Changing how we view and interact with the world!
+
+## CP MIDI
 [link to cp midi](https://kyle1james.github.io/cp_midi_2018/)
 
 
