@@ -363,3 +363,5 @@ void loop() {
 }
 
 ```
+#### Debugging
+If you still run into errors, try updateing arduino and adafruit avr boards
